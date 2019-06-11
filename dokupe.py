@@ -24,6 +24,7 @@ class timer:
 class Maid(timer):
     def complete(self):
         print("お疲れ様です。")
+        self.setLimit(60*30)
         self.count()
         print("ありがとうございます")
     def rest(self):
@@ -34,6 +35,5 @@ class Maid(timer):
 
 m = Maid()
 m.setLimit(1)
-m.setLimit(58 * 60)
 m.count()
 m.complete()
