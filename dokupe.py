@@ -14,13 +14,26 @@ class timer:
             sleep(1)
             if(self.counter >= self.limitTime):
                 break;
-        self.complete()
+
     def setLimit(self,Limitter):
         self.limitTime = Limitter
 
     def complete(self):
         print("完了しました")
         pass
-c = timer()
-c.setLimit(10)
-c.count()
+class Maid(timer):
+    def complete(self):
+        print("お疲れ様です。")
+        self.count()
+        print("ありがとうございます")
+    def rest(self):
+        print("休憩しませんか?")
+    limit2 = 0
+    def setLimit2(self,limit):
+        self.limit2 = limit
+
+m = Maid()
+m.setLimit(1)
+m.setLimit(58 * 60)
+m.count()
+m.complete()
