@@ -32,7 +32,7 @@ class Maid(timer):
     limit2 = 0
     def setLimit2(self,limit):
         self.limit2 = limit
-
+print("hello")
 m = Maid()
 m.setLimit(1)
 m.count()
